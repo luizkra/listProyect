@@ -1,6 +1,12 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "test_app",
+    "password": "gus123456",
     "name": "db",
-    "connector": "memory"
+    "user": "gus2",
+    "connector": "mongodb"
   }
 }
