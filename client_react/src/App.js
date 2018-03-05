@@ -1,20 +1,17 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Main from './components/main';
+import Navbar from './components/Navbar';
+import {Link} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">My app</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Navbar />
+    <div className="container">
+      <Main />
+    </div>
+    <div className="fixed-action-btn" />
+  </div>
+);
 
 export default App;
