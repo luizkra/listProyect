@@ -5,7 +5,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="green darken-3">
+        <nav className=" teal darken-1">
           <div className="nav-wrapper">
             <a href="/" className="brand-logo center">
               Listas

@@ -10,7 +10,6 @@ const App = () => (
     <div className="container">
       <Main />
     </div>
-    <div className="fixed-action-btn" />
   </div>
 );
 

@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './../App.css';
+import ListItem from './listItem';
+
 const api = 'http://localhost:3000/api/lists';
 class List extends Component {
   constructor() {
@@ -28,16 +31,24 @@ class List extends Component {
   }
   render() {
     const dataList = this.state.list.map((list, i) => {
-      return (
-        <li key={i} className="collection-item">
-          {' '}
-          {list.name}
-        </li>
-      );
+      return <ListItem key={list.id} item={list} />;
     });
     return (
       <div>
-        <ul className="collection">{dataList}</ul>
+        <div class="row">
+          <div class="col s12">
+            <h4>Lista general </h4>
+          </div>
+          <div class="col s12">
+            <ul className="collection hoverable">{dataList}</ul>
+          </div>
+        </div>
+
+        <div className="fixed-action-btn">
+          <Link to="#" className="btn-floating btn-large teal accent-4 pulse">
+            <i className="fa fa-plus" />
+          </Link>
+        </div>
       </div>
     );
   }
